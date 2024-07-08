@@ -12,8 +12,7 @@ email: cdm2883@naver.com
 # email_title: Email (Email title override)
 phone: 010-6717-2883
 # phone_title: Phone (Phone title override)
-Github: https://www.github.com/chadongmin
-# website_title: Web (Website title override)
+website: https://iamdongmin.tistory.com
 
 # 다크모드 설정 (true/false/never)
 darkmode: never
@@ -49,14 +48,18 @@ additional_links:
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile_image.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Java & Spring 기반의 1년차 서버 백엔드 개발자 차동민입니다. <br>
-  금융 소프트웨어 기업인 (주)아이티아이즈에서 <mark>조각투자 블록체인 연계 API 개발</mark> 등의 프로젝트를 수행했습니다. <br>
-  문서화되지 않은 모든 항목을 문서화하여 공유하고, 개발 중 반복되는 과정을 자동화하는 등 <mark>팀 전체의 생산성 향상</mark>을 위해 노력했습니다. <br>
-  현재는 서비스 운영 경험을 위해 퇴근 후 팀 프로젝트로 '보틀노트'라는 서비스를 개발중입니다.<br>
+  Java & Spring 기반의 1년차 서버 백엔드 개발자 차동민입니다. 
+  
+  금융 소프트웨어 기업인 (주)아이티아이즈에서 <mark>조각투자 블록체인 연계 API 개발</mark> 등의 프로젝트를 수행했습니다. 
+  
+  문서화되지 않은 모든 항목을 문서화하여 공유하고, 개발 중 반복되는 과정을 자동화하는 등 <mark>팀 전체의 생산성 향상</mark>을 위해 노력했습니다. 
+  
+  현재는 서비스 운영 경험을 위해 퇴근 후 팀 프로젝트로 '보틀노트'라는 서비스를 개발중입니다.
+  
   팀원들과 **코드 리뷰** 및 **테스트 코드** 작성을 하며 지속적인 소프트웨어 품질 향상을 위해 노력합니다.
 content:
   #경력
-  - title: 경력
+  - title: Experience
     layout: list
     content:
       - layout: left
