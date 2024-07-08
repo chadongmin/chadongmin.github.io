@@ -224,7 +224,6 @@ content:
           자바 프로그래밍 : A+
   - layout: list
     title: Certificate
-    sub_title: AI 소프트웨어 전공
     #quote: >
     content:
       - layout: list
@@ -241,6 +240,7 @@ content:
         title: 워드프로세서
         sub_title: 대한상공회의소
         caption: 2020.06
+        border: weak
 
       
 #
