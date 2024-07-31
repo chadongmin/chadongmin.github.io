@@ -95,7 +95,7 @@ content:
             - Github 브랜치 푸쉬 감지 후 OpenSSH로 원격 배포 구축  
             
           - 레거시 코드 개선
-            - 외부 API 호출 시 HttpUrlConnection → Feign Client 전환하여 DB Connection Pool 재사용하도록 리팩토링 
+            - 외부 API 호출 시 HttpUrlConnection → Feign Client 전환하여 HTTP Connection Pool 재사용 
               
           <br>
       
