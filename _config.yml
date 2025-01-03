@@ -47,17 +47,15 @@ additional_links:
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile_image.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Java & Spring 기반 백엔드 개발자 차동민입니다.  
+  제네시스네스트 BE개발2팀 Java & Spring 기반 백엔드 개발자 차동민입니다.  
   
-  **회사와 팀에 기여 할 수 있다면 어떤 일도 마다하지 않고 능동적인 자세로 임하며, 치열하게 발전하려고 노력합니다.** 
+  **회사와 팀에 기여할 수 있다면 어떤 일도 마다하지 않고 능동적인 자세로 임하며, 치열하게 발전하려고 노력합니다.**
   
-  <mark>팀 전체의 생산성 향상</mark>을 위해 개발 중 **반복되는 과정을 자동화**하고, **문서가 없는 항목의 가이드라인을 만들고 공유**했습니다. 
+  **프로 스포츠 선수처럼 개인 시간에 꾸준히 훈련하며, 업무 시간에 최고의 퍼포먼스를 발휘하고자 노력합니다.**  
   
-  스스로의 성장을 위해, <mark>실 서비스 운영</mark>을 하며 달리는 자동차를 고치고 튜닝하는 경험을 해보고 싶다는 생각이 들었습니다.
+  약 8개월간 퇴근 이후 위스키 리뷰 서비스 **'보틀노트'**를 개발하며 약 1000개의 커밋을 통해 기술적 역량을 강화하였습니다.
   
-  그래서 퇴근 후, 직장인 개발자 동아리에서 위스키 리뷰 서비스 **'보틀노트'**를 서비스 런칭을 목표로 개발하고 있습니다.
-  
-  **코드 리뷰**를 통해 서로 의견을 교환하고 남이 읽기 좋은 코드를 작성하며, **테스트 코드** 작성을 하며 검증된 코드를 만듭니다.
+  **코드 리뷰**를 통해 서로 의견을 교환하고 남이 읽기 좋은 코드를 작성하며, **테스트 코드** 작성을 통해 검증된 코드를 만듭니다.
 content:
   #경력
   - title: Experience
@@ -68,14 +66,17 @@ content:
         sub_title: BE개발 2팀
         caption: 2024.09 ~ 현재
         #        link: Link to company (optional)
-        quote: >
+        quote: > 
+          NHN 한게임 대표 출신 대표님을 비롯한 여러 핵심 인재들로 구성되어 있으며, 2022년 설립 이후 10000 % 이상 매출 성장
+        
 
         description: | # this will include new lines to allow paragraphs
           
-          **현대,기아,제네시스 앱의 통합 어드민 개발 (2024.04 ~ 현재)**
+          **현대,기아,제네시스 앱의 통합 어드민 개발 (2024.09 ~ 현재)**
           
-            기술 스택 : `Java17`, `SpringBoot 3.0`, `Spring Data JPA`, `QueryDsl`, `AWS`, 'Junit5', 'Mockito', 'Gitlab'
+            기술 스택 : `Java17`, `SpringBoot 3.0`, `Spring Data JPA`, `QueryDsl`, `MySQL`, `AWS`, 'Junit5', 'Mockito', 'Gitlab'
           
+          - API 내부에서 약 30번의 분기처리가 발생하는 로직을 Spring Statemachine 사용하여 구현 및 운영 배포
           - 앱에서 별도의 관리 메뉴 없이 어드민에서만 직접 관리하여 앱에 노출할 수 있는 컴포넌트 관리 기능 개발
           - 어드민 유저의 저장, 수정, 삭제 및 전시순서 변경 액션을 일괄 처리하는 API 개발
           
@@ -133,16 +134,15 @@ content:
           모니터링 : `Grafana`, `Prometheus`<br> 
           
           기능 개발
-          - 프로젝트 핵심 기능인 리뷰 관련 API (리뷰 작성, 수정, 삭제, 조회) 개발
-          - Spring Event를 사용하여 리뷰, 별점, 좋아요 등록시 히스토리 저장 기능 구현
+          - 프로젝트 핵심 기능인 리뷰 관련 API (리뷰, 팔로우, 회원) 개발
+          - Spring Event를 사용하여 리뷰, 별점, 좋아요 등록시 비동기로 처리되는 히스토리 저장 기능 구현
             - 이벤트 발행 시 공통 payload 모델 정의하여 재사용성 증대 
           - JWT 기반 회원가입, 로그인, 토큰 재발급 API 개발
-          - 사용자 문의 관련 API 개발
           
           주요 경험
           - 일급컬렉션을 적용하여 도메인 규칙과 비즈니스 로직을 분리 후 이를 사내 코드에도 적용
           - 연관 된 애그리거트 의존 시 Facade 인터페이스에 의존하도록 분리하여 추후 모듈화 및 리팩토링에 용이하도록 개선 
-          - 단위 테스트 코드 작성(Junit5, Mockito) 및 Testcontainers를 활용한 통합테스트 코드 작성
+          - 단위 테스트 코드 작성(Junit5, Mockito) 및 Test containers를 활용한 통합테스트 코드 작성
 
     #인턴 및 대외활동
   - title: Intern
