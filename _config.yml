@@ -49,13 +49,15 @@ about_profile_image: images/profile_image.jpg
 about_content: | # this will include new lines to allow paragraphs
   제네시스네스트 BE개발2팀 Java & Spring 기반 백엔드 개발자 차동민입니다.  
   
-  **회사와 팀에 기여할 수 있다면 어떤 일도 마다하지 않고 능동적인 자세로 임하며, 치열하게 발전하려고 노력합니다.**
+  **프로젝트를 성공시키기 위해 항상 능동적인 자세로 임하며, FE 및 타 직군과의 협업에 능합니다.**
+  
+  특히 기획자와의 소통을 통해 비즈니스 요구사항을 정확히 이해하고, 이를 기술적으로 구현하는 것을 중요하게 생각합니다.
   
   **프로 스포츠 선수처럼 개인 시간에 꾸준히 훈련하며, 업무 시간에 최고의 퍼포먼스를 발휘하고자 노력합니다.**  
   
-  약 8개월간 퇴근 이후 위스키 리뷰 서비스 **'보틀노트'**를 개발하며 약 1000개의 커밋을 통해 기술적 역량을 강화하였습니다.
+  약 8개월간 퇴근 후 위스키 리뷰 서비스 **'보틀노트'**를 개발하며 약 1000개의 커밋을 통해 기술적 역량을 강화하였습니다.
   
-  **코드 리뷰**를 통해 서로 의견을 교환하고 남이 읽기 좋은 코드를 작성하며, **테스트 코드** 작성을 통해 검증된 코드를 만듭니다.
+  **코드 리뷰**를 통해 서로 의견을 교환하고 **테스트 코드** 로 검증 된, 읽기 좋은 코드를 작성합니다.
 content:
   #경력
   - title: Experience
@@ -67,14 +69,14 @@ content:
         caption: 2024.09 ~ 현재
         #        link: Link to company (optional)
         quote: > 
-          NHN 한게임 대표 출신 대표님을 비롯한 여러 핵심 인재들로 구성되어 있으며, 2022년 설립 이후 10000 % 이상 매출 성장
+          NHN CTO 출신 대표님을 비롯한 여러 핵심 인재들로 구성되어 있으며, 2022년 설립 이후 10000 % 이상 매출 성장
         
 
         description: | # this will include new lines to allow paragraphs
           
           **현대,기아,제네시스 앱의 통합 어드민 개발 (2024.09 ~ 현재)**
           
-            기술 스택 : `Java17`, `SpringBoot 3.0`, `Spring Data JPA`, `QueryDsl`, `MySQL`, `AWS`, 'Junit5', 'Mockito', 'Gitlab'
+            기술 스택 : `Java17`, `SpringBoot 3.0`, `Spring Data JPA`, `QueryDsl`, `MySQL`, `AWS`, `Junit5`, `Mockito`, `Gitlab`
           
           - API 내부에서 약 30번의 분기처리가 발생하는 로직을 Spring Statemachine 사용하여 구현 및 운영 배포
           - 앱에서 별도의 관리 메뉴 없이 어드민에서만 직접 관리하여 앱에 노출할 수 있는 컴포넌트 관리 기능 개발
@@ -126,10 +128,10 @@ content:
         description: | # this will include new lines to allow paragraphs
           
           기술 스택 : 
-          `JAVA 17`, `SpringBoot 3.0`, `Spring Security`
+          `Java17`, `SpringBoot 3.0`, `Spring Security`
           `MySql`, `QueryDSL`, `Spring Data JPA` <br>
           배포 : `AWS ECS`, `AWS ECR`, `AWS Route53`, `AWS CloudFront`,
-          `github Action`,`Docker` <br>
+          `Github Action`,`Docker` <br>
           테스트 : `Junit5`, `Mockito` <br>
           모니터링 : `Grafana`, `Prometheus`<br> 
           
