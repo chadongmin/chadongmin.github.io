@@ -47,17 +47,17 @@ additional_links:
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile_image.jpg
 about_content: | # this will include new lines to allow paragraphs
-  제네시스네스트 BE개발2팀 Java & Spring 기반 백엔드 개발자 차동민입니다.  
+  Java & Spring 기반 백엔드 개발자 차동민입니다.
   
-  **프로젝트를 성공시키기 위해 항상 능동적인 자세로 임하며, FE 및 타 직군과의 협업에 능합니다.**
+  **1. 프로젝트를 성공시키기 위해 항상 능동적인 자세로 임하며, FE 및 타 직군과의 협업에 능합니다.**
   
-  특히 기획자와의 소통을 통해 비즈니스 요구사항을 정확히 이해하고, 이를 기술적으로 구현하는 것을 중요하게 생각합니다.
+  - 특히 기획자와의 소통을 통해 비즈니스 요구사항을 정확히 이해하여 일정에 차질 없는 개발을 진행하였습니다.
   
-  **프로 스포츠 선수처럼 개인 시간에 꾸준히 훈련하며, 업무 시간에 최고의 퍼포먼스를 발휘하고자 노력합니다.**  
+  **2. 프로 스포츠 선수처럼 개인 시간에 꾸준히 훈련하며, 업무 시간에 최고의 퍼포먼스를 발휘하고자 노력합니다.**  
   
-  약 8개월간 퇴근 후 위스키 리뷰 서비스 **'보틀노트'**를 개발하며 약 1000개의 커밋을 통해 기술적 역량을 강화하였습니다.
+  - 약 8개월간 퇴근 후 위스키 리뷰 서비스 **'보틀노트'**를 개발하며 약 1000개의 커밋을 통해 기술적 역량을 강화하였습니다.
   
-  **코드 리뷰**를 통해 서로 의견을 교환하고 **테스트 코드** 로 검증 된, 읽기 좋은 코드를 작성합니다.
+  **3. 코드 리뷰**를 통해 서로 의견을 교환하고 **테스트 코드**로 검증 된 코드를 읽기 좋게 작성합니다.
 content:
   #경력
   - title: Experience
@@ -74,7 +74,7 @@ content:
 
         description: | # this will include new lines to allow paragraphs
           
-          **현대,기아,제네시스 앱의 통합 어드민 개발 (2024.09 ~ 현재)**
+          **현대, 기아, 제네시스 앱의 통합 어드민 개발 (2024.09 ~ 현재)**
           
             기술 스택 : `Java17`, `SpringBoot 3.0`, `Spring Data JPA`, `QueryDsl`, `MySQL`, `AWS`, `Junit5`, `Mockito`, `Gitlab`
           
