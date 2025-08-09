@@ -77,15 +77,17 @@
       </p>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content"><p class="quote">"제네시스네스트, 3년간 매출 5000만원→60.5억원…120배 성장 - 플래텀" https://platum.kr/archives/266988
-</p><p><strong>Hyundai Motor Group 원앱 Front-Office 개발 (2024.09 ~ 2025.02)</strong></p>
+</p><p><strong>Hyundai Motor Group 원앱 Front-Office 개발 (2024.02 ~ 현재)</strong></p>
 
-<p>기술 스택 : <code class="language-plaintext highlighter-rouge">Java17</code>, <code class="language-plaintext highlighter-rouge">SpringBoot 3.0</code>, <code class="language-plaintext highlighter-rouge">Spring Data JPA</code>, <code class="language-plaintext highlighter-rouge">QueryDsl</code>, <code class="language-plaintext highlighter-rouge">MySQL</code>, <code class="language-plaintext highlighter-rouge">AWS</code>, <code class="language-plaintext highlighter-rouge">Junit5</code>, <code class="language-plaintext highlighter-rouge">Mockito</code>, <code class="language-plaintext highlighter-rouge">Gitlab</code></p>
+<p>현대자동차 그룹의 고객채널 서비스 (마이현대, 기아, 제네시스)의 통합 백엔드 서버. 개인화 된 컴포넌트와 차량 등록, 공유 기능을 제공</p>
+
+<p><code class="language-plaintext highlighter-rouge">Java17</code>, <code class="language-plaintext highlighter-rouge">SpringBoot 3.0</code>, <code class="language-plaintext highlighter-rouge">Spring Data JPA</code>, <code class="language-plaintext highlighter-rouge">QueryDsl</code>, <code class="language-plaintext highlighter-rouge">MySQL</code>, <code class="language-plaintext highlighter-rouge">AWS</code>, <code class="language-plaintext highlighter-rouge">Junit5</code>, <code class="language-plaintext highlighter-rouge">Mockito</code>, <code class="language-plaintext highlighter-rouge">Gitlab</code></p>
 
 <ul>
-  <li>test1
+  <li>출고일자 누락 데이터 보정 배치 개발
     <ul>
-      <li>test2</li>
-      <li>test2</li>
+      <li>외부 시스템과의 데이터 동기화 시점 차이로 차량 테이블의 출고일자 컬럼이 null로 초기화 되어, 유관 서비스의 진입이 불가한 문제를 해결하기 위한 배치 개발</li>
+      <li>초기 COUNT 기반 상관 서브쿼리의 비효율(반복 수행, 풀스캔)을 NOT EXISTS (Anti-Join) 패턴으로 개선하여 쿼리 속도 20% 이상 단축하고 일 300건 이상의 데이터를 보정하여 서비스 안정성 확보</li>
     </ul>
   </li>
 </ul>
@@ -93,9 +95,9 @@
 <p><br /></p>
 
 <ul>
-  <li>test1
+  <li>신뢰할 수 없는 외부 데이터로 발생하던 API 장애와 데이터 정합성 문제를 애플리케이션 레벨에서 근본적으로 해결
     <ul>
-      <li>test2</li>
+      <li>도메인 규칙 기반 유효 데이터 판별 로직 추가로, 일 30건 이상의 VoC를 유발하던 API 오류를 원천 차단하고 서비스 안정성 확보</li>
     </ul>
   </li>
 </ul>
@@ -103,24 +105,31 @@
 <p><br /></p>
 
 <ul>
-  <li>test1
+  <li>차량명 결정 로직 리팩토링 및 최적화
     <ul>
-      <li>test1</li>
+      <li>각 국가별 if-else로 하드코딩된 비즈니스 규칙을 함수형 인터페이스(BiPredicate, BiFunction)를 적용한 Enum으로 객체로 분리
+        <ul>
+          <li>신규 정책 추가 시 비즈니스 로직의 수정없이 Enum 에만 추가하여 개발시간 50% 이상 단축</li>
+          <li>VO(Value Object)에서 비즈니스 로직을 완전히 분리하고 단위 테스트가 가능한 구조로 변경하여, 코드의 신뢰도와 응집도를 크게 향상</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>차량등록 서류 제출 기능 개발
+    <ul>
+      <li>브랜드별 서류 제출 유효성 검증 로직을 어노테이션 기반 CustomValidator로 통합 구현</li>
+      <li>현대, 기아, 제네시스 각기 다른 제출 유형과 필수 서류 조건을 일원화하여 신규 유형 추가 시 코드 변경 범위를 30% 이상 줄임</li>
     </ul>
   </li>
 </ul>
 
 <p><br /></p>
-
-<ul>
-  <li>테스트 자동화(JUnit5/Mockito)와 GitLab CI 파이프라인을 통해 안정적 빌드·배포 환경 유지.</li>
-</ul>
 
 <p><strong>Hyundai Motor Group 원앱 어드민 개발 (2024.09 ~ 2025.02)</strong></p>
 
-<p>유저의 차량 점유정보, 차량 등록 시 서류 승인 기능 및 개인화 된 컴포넌트를 권역,국가 별로 관리 할 수 있는 어드민 서비스 입니다.</p>
+<p>유저의 차량 점유정보 조회, 차량 등록 시 서류 승인 기능 및 개인화 된 컴포넌트를 권역,국가 별로 관리 할 수 있는 어드민 서비스 입니다.</p>
 
-<p>기술 스택 : <code class="language-plaintext highlighter-rouge">Java17</code>, <code class="language-plaintext highlighter-rouge">SpringBoot 3.0</code>, <code class="language-plaintext highlighter-rouge">Spring Data JPA</code>, <code class="language-plaintext highlighter-rouge">QueryDsl</code>, <code class="language-plaintext highlighter-rouge">MySQL</code>, <code class="language-plaintext highlighter-rouge">AWS</code>, <code class="language-plaintext highlighter-rouge">Junit5</code>, <code class="language-plaintext highlighter-rouge">Mockito</code>, <code class="language-plaintext highlighter-rouge">Gitlab</code></p>
+<p><code class="language-plaintext highlighter-rouge">Java17</code>, <code class="language-plaintext highlighter-rouge">SpringBoot 3.0</code>, <code class="language-plaintext highlighter-rouge">Spring Data JPA</code>, <code class="language-plaintext highlighter-rouge">QueryDsl</code>, <code class="language-plaintext highlighter-rouge">MySQL</code>, <code class="language-plaintext highlighter-rouge">AWS</code>, <code class="language-plaintext highlighter-rouge">Junit5</code>, <code class="language-plaintext highlighter-rouge">Mockito</code>, <code class="language-plaintext highlighter-rouge">Gitlab</code></p>
 
 <ul>
   <li>차량등록 서류 승인 기능을 Spring State Machine 기반으로 개발
