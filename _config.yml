@@ -205,6 +205,29 @@ content:
           - 연관된 애그리거트 의존 시 Facade 인터페이스에 의존하도록 분리하여 추후 모듈화 및 리팩토링에 용이하도록 개선 
           - 단위 테스트 코드 작성(JUnit 5, Mockito) 및 Testcontainers를 활용한 통합테스트 코드 작성
 
+  - title: Open Source
+    layout: list
+    content:
+      - layout: left
+        title: QueryDSL
+        link: https://github.com/querydsl/querydsl
+        link_text: querydsl/querydsl
+        description: |
+          - 기능 추가 및 버그 수정 PR 3건 참여
+          - 사용성 개선과 안정성 향상에 기여
+      - layout: left
+        title: AssertJ
+        link: https://github.com/assertj/assertj
+        link_text: assertj/assertj
+        description: |
+          - 버그 수정 PR 1건 참여
+      - layout: left
+        title: Apache Zeppelin
+        link: https://github.com/apache/zeppelin
+        link_text: apache/zeppelin
+        description: |
+          - 버그 수정 PR 1건 참여
+
     #인턴 및 대외활동
   - title: Intern
     layout: list
