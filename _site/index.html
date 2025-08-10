@@ -57,11 +57,11 @@
       </div><div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
       <p>2년차 백엔드 개발자로, 적극성과 몰입력을 강점으로 삼아 프로젝트에 임합니다.</p>
 
-<p><strong>국내 자동차 대기업 고객채널 서비스(누적회원 3,000만, 동시접속 수십만)</strong>에서 출고일자 보정 배치와 대규모 데이터 마이그레이션을 주도해 수백만 명의 고객 데이터 정합성을 보장했습니다.</p>
+<p>국내 자동차 대기업 고객채널 서비스(누적회원 3,000만, 동시접속 수십만)에서 출고일자 보정 배치와 대규모 데이터 마이그레이션을 주도해 수백만 명의 고객 데이터 정합성을 보장했습니다.</p>
 
-<p>동시접속 10만 명 규모의 채팅 플랫폼에서는 임계값 기반 이벤트 전송 로직을 설계·적용해 트래픽을 최적화하고 서비스 부하를 효과적으로 감소시켰습니다.</p>
+<p>동시접속 10만 명 규모의 채팅 플랫폼 개발을 하며, 임계값 기반 이벤트 전송 로직을 설계·적용해 트래픽을 최적화하고 서비스 부하를 효과적으로 감소시켰습니다.</p>
 
-<p>업무에서 사용하는 기술의 품질을 직접 개선하는 것을 즐기며, QueryDSL(기능 추가·버그 수정 3건), AssertJ(버그 수정 1건), <strong>Apache Zeppelin(버그 수정 1건)</strong>에 기여했습니다.</p>
+<p>업무에서 사용하는 기술의 품질을 직접 개선하는 것을 즐기며, QueryDSL(기능 추가·버그 수정 3건), AssertJ(버그 수정 1건), Apache Zeppelin(버그 수정 1건)에 기여했습니다.</p>
 
     </div>
   </div>
@@ -77,9 +77,43 @@
       </p>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content"><p class="quote">"제네시스네스트, 3년간 매출 5000만원→60.5억원…120배 성장 - 플래텀" https://platum.kr/archives/266988
-</p><p><strong>Hyundai Motor Group 원앱 Front-Office 개발 (2024.02 ~ 현재)</strong></p>
+</p><p><strong>사내 자체 채팅 플랫폼 개발 (2025.06 ~ 현재)</strong></p>
 
-<p>현대자동차 그룹의 고객채널 서비스 (마이현대, 기아, 제네시스)의 통합 백엔드 서버. 개인화 된 컴포넌트와 차량 등록, 공유 기능을 제공</p>
+<p>서비스 중인 팬덤 앱(Churrrrr, DayOff)에서 사용중인 Sendbird 채팅 플랫폼을 대체할 사내 자체 채팅 플랫폼 개발</p>
+
+<p><code class="language-plaintext highlighter-rouge">Java21</code>, <code class="language-plaintext highlighter-rouge">SpringBoot 3.4</code>, <code class="language-plaintext highlighter-rouge">RabbitMQ</code>, <code class="language-plaintext highlighter-rouge">Redis</code>, <code class="language-plaintext highlighter-rouge">Spring Data JPA</code>, <code class="language-plaintext highlighter-rouge">QueryDsl</code>, <code class="language-plaintext highlighter-rouge">MySQL</code>, <code class="language-plaintext highlighter-rouge">MS Azure</code>, <code class="language-plaintext highlighter-rouge">Terraform</code></p>
+
+<ul>
+  <li><strong>실시간 이모지 등록 로직 처리 최적화로 세션 서버 및 클라이언트 부하 감소</strong>
+    <ul>
+      <li>아티스트 메시지에 수만 건의 이모지 등록 몰리는 상황에서, Redis에 저장된 이모지 카운트가 임계치에 도달할때만 웹소켓 이벤트 전송하여 실시간 부하를 획기적으로 감소</li>
+      <li>Hash 자료형을 일급 컬렉션으로 래핑해 도메인 모델을 구축, 재사용성과 확장성을 확보하며 코드 품질 개선</li>
+    </ul>
+  </li>
+  <li><strong>아티스트 메시지 전송 시 다국어 번역 처리를 동기 → 비동기 방식으로 전환하여 API 응답 속도 50% 이상 향상</strong>
+    <ul>
+      <li>기존 동기 방식의 번역 처리로 인해 메시지 전송 시 API 응답 속도가 느려지는 문제 발생</li>
+      <li>비동기 방식으로 전환하여 원본 메시지 우선 전송 처리 및 별도의 스레드에서 번역을 수행하도록 개선 -&gt; API 응답 속도가 50% 이상 향상되어 사용자 경험 개선</li>
+    </ul>
+  </li>
+  <li>변경이 잦은 환경에서 DIP를 적용하여 도메인의 변경을 최소화
+    <ul>
+      <li>DB, 메시지 브로커 등 세부 구현 기술의 변경이 예상되는 상황에서 애플리케이션 계층이 추상화에 의존하도록 구현하여 변경을 최소화 하도록 설계</li>
+      <li>ArchUnit을 통한 아키텍처 검증을 CI에 포함시켜 팀원들이 DIP 원칙을 준수하며, 코드 품질을 지속적으로 유지할 수 있도록 기여</li>
+    </ul>
+  </li>
+  <li><strong>신뢰할 수 없는 외부 데이터로 발생하던 API 장애와 데이터 정합성 문제를 애플리케이션 레벨에서 근본적으로 해결</strong>
+    <ul>
+      <li>도메인 규칙 기반 유효 데이터 판별 로직을 핫픽스로 추가하여, 일 30건 이상의 VoC를 유발하던 API 오류를 당일 해소함</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<p><strong>Hyundai Motor Group 원앱 Front-Office 개발 (2024.02 ~ 현재)</strong></p>
+
+<p>현대자동차 그룹의 고객채널 서비스 (마이현대, 기아, 제네시스)의 통합 백엔드 서버</p>
 
 <p><code class="language-plaintext highlighter-rouge">Java17</code>, <code class="language-plaintext highlighter-rouge">SpringBoot 3.0</code>, <code class="language-plaintext highlighter-rouge">Spring Data JPA</code>, <code class="language-plaintext highlighter-rouge">QueryDsl</code>, <code class="language-plaintext highlighter-rouge">MySQL</code>, <code class="language-plaintext highlighter-rouge">AWS</code>, <code class="language-plaintext highlighter-rouge">Junit5</code>, <code class="language-plaintext highlighter-rouge">Mockito</code>, <code class="language-plaintext highlighter-rouge">Gitlab</code></p>
 
@@ -92,7 +126,8 @@
   </li>
   <li><strong>신뢰할 수 없는 외부 데이터로 발생하던 API 장애와 데이터 정합성 문제를 애플리케이션 레벨에서 근본적으로 해결</strong>
     <ul>
-      <li>도메인 규칙 기반 유효 데이터 판별 로직을 핫픽스로 추가하여, 일 30건 이상의 VoC를 유발하던 API 오류를 당일 해소함</li>
+      <li>도메인 규칙 기반 유효한 데이터 판별 로직을 핫픽스로 추가하여, DB 데이터의 정합성 문제를 애플리케이션에서 보정</li>
+      <li>일 30건 이상의 VoC를 유발하던 API 오류를 당일 해소함</li>
     </ul>
   </li>
   <li><strong>차량명 결정 로직 리팩토링 및 최적화</strong>
@@ -114,12 +149,12 @@
 
 <p><strong>Hyundai Motor Group 원앱 어드민 개발 (2024.09 ~ 2025.02)</strong></p>
 
-<p>유저의 차량 점유정보 조회, 차량 등록 시 서류 승인 기능 및 개인화 된 컴포넌트를 권역,국가 별로 관리 할 수 있는 어드민 서비스 입니다.</p>
+<p>현대자동차 그룹의 고객채널 서비스 (마이현대, 기아, 제네시스)의 통합 어드민 서버. 차량 점유정보 조회, 서류 승인 및 UI 컴포넌트 관리 기능을 제공</p>
 
 <p><code class="language-plaintext highlighter-rouge">Java17</code>, <code class="language-plaintext highlighter-rouge">SpringBoot 3.0</code>, <code class="language-plaintext highlighter-rouge">Spring Data JPA</code>, <code class="language-plaintext highlighter-rouge">QueryDsl</code>, <code class="language-plaintext highlighter-rouge">MySQL</code>, <code class="language-plaintext highlighter-rouge">AWS</code>, <code class="language-plaintext highlighter-rouge">Junit5</code>, <code class="language-plaintext highlighter-rouge">Mockito</code>, <code class="language-plaintext highlighter-rouge">Gitlab</code></p>
 
 <ul>
-  <li><strong>차량등록 서류 승인 기능을 Spring State Machine 기반으로 개발</strong>
+  <li><strong>차량등록 서류 승인 기능을 Spring StateMachine 기반으로 개발</strong>
     <ul>
       <li>요금제·부가서비스 가입 여부 등 30여 개의 복잡한 분기 조건을 Guard 메서드로 모듈화해 가독성과 유지보수성을 향상.</li>
       <li>조건 변경 시 영향 범위를 명확히 파악할 수 있어 QA 및 코드 리뷰 시간이 단축되었으며, 신규 조건 추가 시 코드 변경 범위를 기존 대비 30% 이상 줄임</li>
