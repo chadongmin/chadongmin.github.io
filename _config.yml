@@ -66,12 +66,12 @@ content:
         caption: 2024.09 ~ 현재
         #        link: Link to company (optional)
         quote: >
-          "제네시스네스트, 3년간 매출 5000만원→60.5억원…120배 성장 - 플래텀" https://platum.kr/archives/266988
+          [제네시스네스트, 3년간 매출 5000만원→60.5억원…120배 성장 - 플래텀](https://platum.kr/archives/266988)
         
 
         description: | # this will include new lines to allow paragraphs
           
-          **사내 자체 채팅 플랫폼 개발 (2025.06 ~ 현재)**
+          #### **사내 자체 채팅 플랫폼 개발 (2025.06 ~ 현재)**
           
           서비스 중인 팬덤 앱(Churrrrr, DayOff)에서 사용중인 Sendbird 채팅 플랫폼을 대체할 사내 자체 채팅 플랫폼 개발
           
@@ -83,7 +83,7 @@ content:
           
           - **아티스트 메시지 전송 시 다국어 번역 처리를 동기 → 비동기 방식으로 전환하여 API 응답 속도 50% 이상 향상**
               - 기존 동기 방식의 번역 처리로 인해 메시지 전송 시 API 응답 속도가 느려지는 문제 발생
-              - 비동기 방식으로 전환하여 원본 메시지 우선 전송 처리 및 별도의 스레드에서 번역을 수행하도록 개선 -> API 응답 속도가 50% 이상 향상되어 사용자 경험 개선
+              - 비동기 방식으로 전환하여 원본 메시지 우선 전송 처리 및 별도의 스레드에서 번역을 수행하도록 개선 → API 응답 속도가 50% 이상 향상되어 사용자 경험 개선
           
           
           - **변경이 잦은 환경에서 애플리케이션 로직 수정 없이 대응 가능하도록 추상화 적용 (DIP)**
@@ -92,7 +92,7 @@ content:
                     
           <br>
           
-          **Hyundai Motor Group 원앱 Front-Office 개발 (2025.02 ~ 현재)**
+          #### **Hyundai Motor Group 원앱 Front-Office 개발 (2025.02 ~ 현재)**
           
           현대자동차 그룹의 고객채널 서비스 (마이현대, 기아, 제네시스)의 통합 백엔드 서버
           
@@ -120,9 +120,9 @@ content:
           
           <br>      
           
-          **Hyundai Motor Group 원앱 어드민 개발 (2024.09 ~ 2025.02)**
+          #### **Hyundai Motor Group 원앱 어드민 개발 (2024.09 ~ 2025.02)**
           
-            현대자동차 그룹의 고객채널 서비스 (마이현대, 기아, 제네시스)의 통합 어드민 서버. 차량 점유정보 조회, 서류 승인 및 UI 컴포넌트 관리 기능을 제공 
+            현대자동차 그룹의 고객채널 서비스 (마이현대, 기아, 제네시스)의 통합 어드민 서버<br> 차량 점유정보 조회, 서류 승인 및 UI 컴포넌트 관리 기능을 제공 
           
             `Java17`, `Spring Boot 3.0`, `Spring Data JPA`, `QueryDSL`, `MySQL`, `AWS`, `JUnit 5`, `Mockito`, `GitLab`
           
@@ -164,7 +164,7 @@ content:
           **한국거래소(KRX) TR시스템 운영 및 유지보수 (2024.01 ~ 2024.04)**
 
     #프로젝트
-  - title: Projects # Title for the section
+  - title: Side Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
@@ -182,8 +182,8 @@ content:
 #            icon: fab fa-github
 #            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
         quote: >
-          위스키를 평가하고 리뷰할 수 있는 서비스 - 서비스 출시 예정<br>
-          프론트 2명, 백엔드 3명으로 구성되어 개발 중
+          위스키를 평가하고 리뷰할 수 있는 서비스 - 앱스토어 출시 완료<br>
+          프론트 2명, 백엔드 2명으로 구성되어 개발 중
         description: | # this will include new lines to allow paragraphs
           
           기술 스택 : 
@@ -205,28 +205,43 @@ content:
           - 연관된 애그리거트 의존 시 Facade 인터페이스에 의존하도록 분리하여 추후 모듈화 및 리팩토링에 용이하도록 개선 
           - 단위 테스트 코드 작성(JUnit 5, Mockito) 및 Testcontainers를 활용한 통합테스트 코드 작성
 
-  - title: Open Source
+  - title: Open Source Contributions
     layout: list
     content:
-      - layout: left
-        title: QueryDSL
-        link: https://github.com/querydsl/querydsl
-        link_text: querydsl/querydsl
-        description: |
-          - 기능 추가 및 버그 수정 PR 3건 참여
-          - 사용성 개선과 안정성 향상에 기여
-      - layout: left
-        title: AssertJ
-        link: https://github.com/assertj/assertj
-        link_text: assertj/assertj
-        description: |
-          - 버그 수정 PR 1건 참여
+
       - layout: left
         title: Apache Zeppelin
         link: https://github.com/apache/zeppelin
         link_text: apache/zeppelin
         description: |
-          - 버그 수정 PR 1건 참여
+          과기부 주관 오픈소스 컨트리뷰션 아카데미에 선발되어 진행한 기여입니다. (2025.07 ~ 현재)
+          - [Fix JWT expiration validation security vulnerability](https://github.com/apache/zeppelin/pull/5007)
+            - JWT 인증 시 만료 시간이 없는 토큰을 유효한 것으로 처리하던 보안 취약점을 해결. 토큰 검증 로직을 강화하여 만료 시간의 존재 여부를 강제하고, 관련 단위 테스트를 추가하여 시스템 보안을 강화
+
+
+      - layout: left
+        title: AssertJ
+        link: https://github.com/assertj/assertj
+        link_text: assertj/assertj
+        description: |
+          - [Handle non-existent field check in recursive comparison containers](https://github.com/assertj/assertj/pull/3857)
+            - usingRecursiveComparison에서 List, Optional 등 컨테이너 내부의 존재하지 않는 필드를 검사할 때, 예외를 발생시키지 않고 통과하던 문제를 해결. 검증 로직이 컨테이너 내부 요소까지 필드 존재 여부를 확인하도록 수정
+
+      - layout: left
+        title: QueryDSL
+        link: https://github.com/OpenFeign/querydsl
+        link_text: OpenFeign/querydsl
+        description: |
+          - [Add TypeWrapperFactoryExpression for Type-Safe Custom Number Mapping in Querydsl Aggregations](https://github.com/OpenFeign/querydsl/pull/1199)
+            - querydsl-core에 TypeWrapper 클래스를 추가하여, sumAggregate() 등 집계 함수의 결과를 커스텀 Number 타입으로 변환할 수 있는 기능 제공
+            - querydsl-core 모듈의 Test Coverage를 약 10% 향상
+          
+          - [Fix Enum Serialization in CaseBuilder for Hibernate Compatibility](https://github.com/OpenFeign/querydsl/pull/1181)
+            - CaseBuilder의 Enum 직렬화 방식을 수정하여 Hibernate 매핑 오류 해결
+          
+          - [Improve handling of contains() on JPA collections mapped with @Converter to basic types](https://github.com/OpenFeign/querydsl/pull/966)
+            - Hibernate의 JPQL 검증이 강화되면서 런타임 예외를 유발하던, @Converter 적용 컬렉션의 부적합한 JPQL 생성 문제를 JPQLSerializer에 사전 검증 로직을 추가하여 해결 (JPQLSerializer가 'MEMBER OF' 절을 생성하기 전에 사전 검증하여 명시적인 예외를 발생시키도록 수정)
+                    
 
     #인턴 및 대외활동
   - title: Intern
@@ -247,26 +262,10 @@ content:
           
           - **순수 Java로 UDP 서버 및 시각화 프로그램을 개발**하고 **머신러닝(SVM 알고리즘)을 통해 성능을 향상**시키는 등의 성과
               - 기존 하드코딩 된 좌표 값 을 **Reflection API로 외부 주입**하도록 개선하여 객체지향 적으로 구현
-  #교육
-  - title: Education
+#  #교육
+  - title: Education & Military Service
     layout: list
     content:
-      - layout: top-left
-        title: 야놀자 테크스쿨
-        sub_title: 교육생
-        caption: 2023.07 ~ 2024.01
-        quote: >
-          야놀자에서 기획하고 패스트캠퍼스에서 운영하는 백엔드 개발자 양성 부트캠프
-        description: | # this will include new lines to allow paragraphs
-          
-          PM, Front-end, UI/UX 디자이너와 협업하여 프로젝트의 기획부터 배포까지 경험
-
-          - **현업 야놀자 개발자 평가 후 12팀 중 1위로 최우수 프로젝트 선정**
-
-          여행/숙박/예약 도메인의 비즈니스적 관점에서의 문제점을 겪고 해결
-
-          Spring Boot, MyBatis, JPA, Git, AWS, CI/CD 외 다수
-          
 
       - layout: top-left
         title: 대구대학교
@@ -274,13 +273,17 @@ content:
         caption: 2018.03 ~ 2024.02
         #quote: >
         description: | # this will include new lines to allow paragraphs
+          GPA : 3.87 / 4.5 <br>
+
+      - layout: top-left
+        title: 육군 제 22사단
+        sub_title: 정보통신대대 교환병 만기전역
+        caption: 2019.02 ~ 2020.09
+        #quote: >
+        description: | 
+          육군훈련소 수료 후 '훈련병 간 상호평가 최우수자'로 선정되어 연대장(대령) 표창 수상 & 포상휴가 수여
           
-          학점 : 3.87 / 4.5 <br>
-          성적장학금 3회 및 교수님 추천 장학금 수혜 <br>
-          자료구조 : A+ |
-          운영체제 : A+ |
-          컴퓨터네트워크 : A |
-          자바 프로그래밍 : A+
+
   - layout: list
     title: Certificate
     #quote: >

@@ -35,7 +35,7 @@
           <li>
             
 <a href="https://iamdongmin.tistory.com" target="_blank" class="button button--sacnite button--round-l">
-              <i class="fab fa-brands fa-vimeo" title="Link name"></i>
+              <i class="fas fa-globe" title="Blog"></i>
             </a>
           </li>
         
@@ -61,7 +61,7 @@
 
 <p>동시접속 10만 명 규모의 채팅 플랫폼 개발을 하며, 임계값 기반 이벤트 전송 로직을 설계·적용해 트래픽을 최적화하고 서비스 부하를 효과적으로 감소시켰습니다.</p>
 
-<p>업무에서 사용하는 기술의 품질을 직접 개선하는 것을 즐기며, QueryDSL(기능 추가·버그 수정 3건), AssertJ(버그 수정 1건), Apache Zeppelin(버그 수정 1건)에 기여했습니다.</p>
+<p>업무에서 사용하는 기술의 코드를 직접 개선하는 것을 즐기며, QueryDSL(기능 추가·버그 수정 3건), AssertJ(버그 수정 1건), Apache Zeppelin(버그 수정 1건)에 기여했습니다.</p>
 
     </div>
   </div>
@@ -76,46 +76,41 @@
         
       </p>
     </div>
-    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content"><p class="quote">"제네시스네스트, 3년간 매출 5000만원→60.5억원…120배 성장 - 플래텀" https://platum.kr/archives/266988
-</p><p><strong>사내 자체 채팅 플랫폼 개발 (2025.06 ~ 현재)</strong></p>
+    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content"><p class="quote">[제네시스네스트, 3년간 매출 5000만원→60.5억원…120배 성장 - 플래텀](https://platum.kr/archives/266988)
+</p><h4 id="사내-자체-채팅-플랫폼-개발-202506--현재"><strong>사내 자체 채팅 플랫폼 개발 (2025.06 ~ 현재)</strong></h4>
 
 <p>서비스 중인 팬덤 앱(Churrrrr, DayOff)에서 사용중인 Sendbird 채팅 플랫폼을 대체할 사내 자체 채팅 플랫폼 개발</p>
 
-<p><code class="language-plaintext highlighter-rouge">Java21</code>, <code class="language-plaintext highlighter-rouge">SpringBoot 3.4</code>, <code class="language-plaintext highlighter-rouge">RabbitMQ</code>, <code class="language-plaintext highlighter-rouge">Redis</code>, <code class="language-plaintext highlighter-rouge">Spring Data JPA</code>, <code class="language-plaintext highlighter-rouge">QueryDsl</code>, <code class="language-plaintext highlighter-rouge">MySQL</code>, <code class="language-plaintext highlighter-rouge">MS Azure</code>, <code class="language-plaintext highlighter-rouge">Terraform</code></p>
+<p><code class="language-plaintext highlighter-rouge">Java 21</code>, <code class="language-plaintext highlighter-rouge">Spring Boot 3.4</code>, <code class="language-plaintext highlighter-rouge">RabbitMQ</code>, <code class="language-plaintext highlighter-rouge">Redis</code>, <code class="language-plaintext highlighter-rouge">Spring Data JPA</code>, <code class="language-plaintext highlighter-rouge">QueryDSL</code>, <code class="language-plaintext highlighter-rouge">MySQL</code>, <code class="language-plaintext highlighter-rouge">MS Azure</code>, <code class="language-plaintext highlighter-rouge">Terraform</code></p>
 
 <ul>
   <li><strong>실시간 이모지 등록 로직 처리 최적화로 세션 서버 및 클라이언트 부하 감소</strong>
     <ul>
-      <li>아티스트 메시지에 수만 건의 이모지 등록 몰리는 상황에서, Redis에 저장된 이모지 카운트가 임계치에 도달할때만 웹소켓 이벤트 전송하여 실시간 부하를 획기적으로 감소</li>
+      <li>아티스트 메시지에 수만 건의 이모지 등록 몰리는 상황에서, Redis에 저장된 이모지 카운트가 임계치에 도달할 때만 웹소켓 이벤트 전송하여 실시간 부하를 획기적으로 감소</li>
       <li>Hash 자료형을 일급 컬렉션으로 래핑해 도메인 모델을 구축, 재사용성과 확장성을 확보하며 코드 품질 개선</li>
     </ul>
   </li>
-  <li><strong>아티스트 메시지 전송 시 다국어 번역 처리를 동기 → 비동기 방식으로 전환하여 API 응답 속도 50% 이상 향상</strong>
+  <li><strong>아티스트 메시지 전송 시 다국어 번역 처리를 동기 ➜ 비동기 방식으로 전환하여 API 응답 속도 50% 이상 향상</strong>
     <ul>
       <li>기존 동기 방식의 번역 처리로 인해 메시지 전송 시 API 응답 속도가 느려지는 문제 발생</li>
-      <li>비동기 방식으로 전환하여 원본 메시지 우선 전송 처리 및 별도의 스레드에서 번역을 수행하도록 개선 -&gt; API 응답 속도가 50% 이상 향상되어 사용자 경험 개선</li>
+      <li>비동기 방식으로 전환하여 원본 메시지 우선 전송 처리 및 별도의 스레드에서 번역을 수행하도록 개선 ➜ API 응답 속도가 50% 이상 향상되어 사용자 경험 개선</li>
     </ul>
   </li>
-  <li>변경이 잦은 환경에서 DIP를 적용하여 도메인의 변경을 최소화
+  <li><strong>변경이 잦은 환경에서 애플리케이션 로직 수정 없이 대응 가능하도록 추상화 적용 (DIP)</strong>
     <ul>
       <li>DB, 메시지 브로커 등 세부 구현 기술의 변경이 예상되는 상황에서 애플리케이션 계층이 추상화에 의존하도록 구현하여 변경을 최소화 하도록 설계</li>
       <li>ArchUnit을 통한 아키텍처 검증을 CI에 포함시켜 팀원들이 DIP 원칙을 준수하며, 코드 품질을 지속적으로 유지할 수 있도록 기여</li>
-    </ul>
-  </li>
-  <li><strong>신뢰할 수 없는 외부 데이터로 발생하던 API 장애와 데이터 정합성 문제를 애플리케이션 레벨에서 근본적으로 해결</strong>
-    <ul>
-      <li>도메인 규칙 기반 유효 데이터 판별 로직을 핫픽스로 추가하여, 일 30건 이상의 VoC를 유발하던 API 오류를 당일 해소함</li>
     </ul>
   </li>
 </ul>
 
 <p><br /></p>
 
-<p><strong>Hyundai Motor Group 원앱 Front-Office 개발 (2024.02 ~ 현재)</strong></p>
+<h4 id="hyundai-motor-group-원앱-front-office-개발-202502--현재"><strong>Hyundai Motor Group 원앱 Front-Office 개발 (2025.02 ~ 현재)</strong></h4>
 
 <p>현대자동차 그룹의 고객채널 서비스 (마이현대, 기아, 제네시스)의 통합 백엔드 서버</p>
 
-<p><code class="language-plaintext highlighter-rouge">Java17</code>, <code class="language-plaintext highlighter-rouge">SpringBoot 3.0</code>, <code class="language-plaintext highlighter-rouge">Spring Data JPA</code>, <code class="language-plaintext highlighter-rouge">QueryDsl</code>, <code class="language-plaintext highlighter-rouge">MySQL</code>, <code class="language-plaintext highlighter-rouge">AWS</code>, <code class="language-plaintext highlighter-rouge">Junit5</code>, <code class="language-plaintext highlighter-rouge">Mockito</code>, <code class="language-plaintext highlighter-rouge">Gitlab</code></p>
+<p><code class="language-plaintext highlighter-rouge">Java17</code>, <code class="language-plaintext highlighter-rouge">Spring Boot 3.0</code>, <code class="language-plaintext highlighter-rouge">Spring Data JPA</code>, <code class="language-plaintext highlighter-rouge">QueryDSL</code>, <code class="language-plaintext highlighter-rouge">MySQL</code>, <code class="language-plaintext highlighter-rouge">AWS</code>, <code class="language-plaintext highlighter-rouge">JUnit 5</code>, <code class="language-plaintext highlighter-rouge">Mockito</code>, <code class="language-plaintext highlighter-rouge">GitLab</code></p>
 
 <ul>
   <li><strong>차량 출고일자 보정 배치 개발 및 쿼리 최적화를 통한 서비스 안정성 확보</strong>
@@ -133,7 +128,7 @@
   <li><strong>차량명 결정 로직 리팩토링 및 최적화</strong>
     <ul>
       <li>각 국가별 if-else로 하드코딩된 비즈니스 규칙을 함수형 인터페이스(BiPredicate, BiFunction)를 적용한 Enum으로 객체로 분리 
-→ 신규 정책 추가 시 비즈니스 로직의 수정없이 Enum 에만 추가하여 개발시간 50% 이상 단축</li>
+➜ 신규 정책 추가 시 비즈니스 로직의 수정없이 Enum 에만 추가하여 개발시간 50% 이상 단축</li>
       <li>VO(Value Object)에서 비즈니스 로직을 완전히 분리하고 단위 테스트가 가능한 구조로 변경하여, 코드의 신뢰도와 응집도를 크게 향상</li>
     </ul>
   </li>
@@ -147,11 +142,11 @@
 
 <p><br /></p>
 
-<p><strong>Hyundai Motor Group 원앱 어드민 개발 (2024.09 ~ 2025.02)</strong></p>
+<h4 id="hyundai-motor-group-원앱-어드민-개발-202409--202502"><strong>Hyundai Motor Group 원앱 어드민 개발 (2024.09 ~ 2025.02)</strong></h4>
 
-<p>현대자동차 그룹의 고객채널 서비스 (마이현대, 기아, 제네시스)의 통합 어드민 서버. 차량 점유정보 조회, 서류 승인 및 UI 컴포넌트 관리 기능을 제공</p>
+<p>현대자동차 그룹의 고객채널 서비스 (마이현대, 기아, 제네시스)의 통합 어드민 서버<br /> 차량 점유정보 조회, 서류 승인 및 UI 컴포넌트 관리 기능을 제공</p>
 
-<p><code class="language-plaintext highlighter-rouge">Java17</code>, <code class="language-plaintext highlighter-rouge">SpringBoot 3.0</code>, <code class="language-plaintext highlighter-rouge">Spring Data JPA</code>, <code class="language-plaintext highlighter-rouge">QueryDsl</code>, <code class="language-plaintext highlighter-rouge">MySQL</code>, <code class="language-plaintext highlighter-rouge">AWS</code>, <code class="language-plaintext highlighter-rouge">Junit5</code>, <code class="language-plaintext highlighter-rouge">Mockito</code>, <code class="language-plaintext highlighter-rouge">Gitlab</code></p>
+<p><code class="language-plaintext highlighter-rouge">Java17</code>, <code class="language-plaintext highlighter-rouge">Spring Boot 3.0</code>, <code class="language-plaintext highlighter-rouge">Spring Data JPA</code>, <code class="language-plaintext highlighter-rouge">QueryDSL</code>, <code class="language-plaintext highlighter-rouge">MySQL</code>, <code class="language-plaintext highlighter-rouge">AWS</code>, <code class="language-plaintext highlighter-rouge">JUnit 5</code>, <code class="language-plaintext highlighter-rouge">Mockito</code>, <code class="language-plaintext highlighter-rouge">GitLab</code></p>
 
 <ul>
   <li><strong>차량등록 서류 승인 기능을 Spring StateMachine 기반으로 개발</strong>
@@ -172,7 +167,7 @@
       <li>문제 해결 후 동일 이슈 재발 없이 개발자가 DB에 수동으로 승인처리 하는 사례를 방지하여 운영 효율성 향상</li>
     </ul>
   </li>
-  <li><strong>테스트 자동화(JUnit5/Mockito)와 GitLab CI 파이프라인을 통해 안정적 빌드·배포 환경 유지.</strong></li>
+  <li><strong>테스트 자동화(JUnit 5/Mockito)와 GitLab CI 파이프라인을 통해 안정적 빌드·배포 환경 유지.</strong></li>
 </ul>
 
     </div>
@@ -206,7 +201,7 @@
           </div>
         
           <div class="container list-container">
-            <h3 id="projects">Projects</h3>
+            <h3 id="side-projects">Side Projects</h3>
             
   <div class="row clearfix layout layout-left border-weak">
     <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
@@ -220,13 +215,13 @@
         
       </p>
     </div>
-    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content"><p class="quote">위스키를 평가하고 리뷰할 수 있는 서비스 - 서비스 출시 예정<br> 프론트 2명, 백엔드 3명으로 구성되어 개발 중
+    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content"><p class="quote">위스키를 평가하고 리뷰할 수 있는 서비스 - 앱스토어 출시 완료<br> 프론트 2명, 백엔드 2명으로 구성되어 개발 중
 </p><p>기술 스택 : 
-<code class="language-plaintext highlighter-rouge">Java17</code>, <code class="language-plaintext highlighter-rouge">SpringBoot 3.0</code>, <code class="language-plaintext highlighter-rouge">Spring Security</code>
-<code class="language-plaintext highlighter-rouge">MySql</code>, <code class="language-plaintext highlighter-rouge">QueryDSL</code>, <code class="language-plaintext highlighter-rouge">Spring Data JPA</code> <br />
+<code class="language-plaintext highlighter-rouge">Java17</code>, <code class="language-plaintext highlighter-rouge">Spring Boot 3.0</code>, <code class="language-plaintext highlighter-rouge">Spring Security</code>
+<code class="language-plaintext highlighter-rouge">MySQL</code>, <code class="language-plaintext highlighter-rouge">QueryDSL</code>, <code class="language-plaintext highlighter-rouge">Spring Data JPA</code> <br />
 배포 : <code class="language-plaintext highlighter-rouge">AWS ECS</code>, <code class="language-plaintext highlighter-rouge">AWS ECR</code>, <code class="language-plaintext highlighter-rouge">AWS Route53</code>, <code class="language-plaintext highlighter-rouge">AWS CloudFront</code>,
-<code class="language-plaintext highlighter-rouge">Github Action</code>,<code class="language-plaintext highlighter-rouge">Docker</code> <br />
-테스트 : <code class="language-plaintext highlighter-rouge">Junit5</code>, <code class="language-plaintext highlighter-rouge">Mockito</code> <br />
+<code class="language-plaintext highlighter-rouge">GitHub Actions</code>,<code class="language-plaintext highlighter-rouge">Docker</code> <br />
+테스트 : <code class="language-plaintext highlighter-rouge">JUnit 5</code>, <code class="language-plaintext highlighter-rouge">Mockito</code> <br />
 모니터링 : <code class="language-plaintext highlighter-rouge">Grafana</code>, <code class="language-plaintext highlighter-rouge">Prometheus</code><br /></p>
 
 <p>기능 개발</p>
@@ -243,8 +238,80 @@
 <p>주요 경험</p>
 <ul>
   <li>일급컬렉션을 적용하여 도메인 규칙과 비즈니스 로직을 분리 후 이를 사내 코드에도 적용</li>
-  <li>연관 된 애그리거트 의존 시 Facade 인터페이스에 의존하도록 분리하여 추후 모듈화 및 리팩토링에 용이하도록 개선</li>
-  <li>단위 테스트 코드 작성(Junit5, Mockito) 및 Test containers를 활용한 통합테스트 코드 작성</li>
+  <li>연관된 애그리거트 의존 시 Facade 인터페이스에 의존하도록 분리하여 추후 모듈화 및 리팩토링에 용이하도록 개선</li>
+  <li>단위 테스트 코드 작성(JUnit 5, Mockito) 및 Testcontainers를 활용한 통합테스트 코드 작성</li>
+</ul>
+
+    </div>
+  </div>
+
+
+          </div>
+        
+          <div class="container list-container">
+            <h3 id="open-source-contributions">Open Source Contributions</h3>
+            
+  <div class="row clearfix layout layout-left border-no">
+    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+      <h4 id="apache-zeppelin">Apache Zeppelin</h4>
+<a href="https://github.com/apache/zeppelin" target="_blank" class="link">apache/zeppelin</a><p class="no-print aditional-links">
+        
+      </p>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content"><p>과기부 주관 오픈소스 컨트리뷰션 아카데미에 선발되어 진행한 기여입니다. (2025.07 ~ 현재)</p>
+<ul>
+  <li><a href="https://github.com/apache/zeppelin/pull/5007">Fix JWT expiration validation security vulnerability</a>
+    <ul>
+      <li>JWT 인증 시 만료 시간이 없는 토큰을 유효한 것으로 처리하던 보안 취약점을 해결. 토큰 검증 로직을 강화하여 만료 시간의 존재 여부를 강제하고, 관련 단위 테스트를 추가하여 시스템 보안을 강화</li>
+    </ul>
+  </li>
+</ul>
+
+    </div>
+  </div>
+
+  <div class="row clearfix layout layout-left border-no">
+    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+      <h4 id="assertj">AssertJ</h4>
+<a href="https://github.com/assertj/assertj" target="_blank" class="link">assertj/assertj</a><p class="no-print aditional-links">
+        
+      </p>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content"><ul>
+  <li><a href="https://github.com/assertj/assertj/pull/3857">Handle non-existent field check in recursive comparison containers</a>
+    <ul>
+      <li>usingRecursiveComparison에서 List, Optional 등 컨테이너 내부의 존재하지 않는 필드를 검사할 때, 예외를 발생시키지 않고 통과하던 문제를 해결. 검증 로직이 컨테이너 내부 요소까지 필드 존재 여부를 확인하도록 수정</li>
+    </ul>
+  </li>
+</ul>
+
+    </div>
+  </div>
+
+  <div class="row clearfix layout layout-left border-no">
+    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+      <h4 id="querydsl">QueryDSL</h4>
+<a href="https://github.com/OpenFeign/querydsl" target="_blank" class="link">OpenFeign/querydsl</a><p class="no-print aditional-links">
+        
+      </p>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content"><ul>
+  <li><a href="https://github.com/OpenFeign/querydsl/pull/1199">Add TypeWrapperFactoryExpression for Type-Safe Custom Number Mapping in Querydsl Aggregations</a>
+    <ul>
+      <li>querydsl-core에 TypeWrapper 클래스를 추가하여, sumAggregate() 등 집계 함수의 결과를 커스텀 Number 타입으로 변환할 수 있는 기능 제공</li>
+      <li>querydsl-core 모듈의 Test Coverage를 약 10% 향상</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/OpenFeign/querydsl/pull/1181">Fix Enum Serialization in CaseBuilder for Hibernate Compatibility</a>
+    <ul>
+      <li>CaseBuilder의 Enum 직렬화 방식을 수정하여 Hibernate 매핑 오류 해결</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/OpenFeign/querydsl/pull/966">Improve handling of contains() on JPA collections mapped with @Converter to basic types</a>
+    <ul>
+      <li>Hibernate의 JPQL 검증이 강화되면서 런타임 예외를 유발하던, @Converter 적용 컬렉션의 부적합한 JPQL 생성 문제를 JPQLSerializer에 사전 검증 로직을 추가하여 해결 (JPQLSerializer가 ‘MEMBER OF’ 절을 생성하기 전에 사전 검증하여 명시적인 예외를 발생시키도록 수정)</li>
+    </ul>
+  </li>
 </ul>
 
     </div>
@@ -289,40 +356,26 @@
           </div>
         
           <div class="container list-container">
-            <h3 id="education">Education</h3>
+            <h3 id="education-military-service">Education & Military Service</h3>
             
-  <div class="row clearfix layout layout-top-left border-no">
-    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-      <h4 id="야놀자-테크스쿨">야놀자 테크스쿨</h4><p><b>교육생</b></p><p>2023.07 ~ 2024.01</p><p class="no-print aditional-links">
-        
-      </p>
-    </div>
-    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content"><p class="quote">야놀자에서 기획하고 패스트캠퍼스에서 운영하는 백엔드 개발자 양성 부트캠프
-</p><p>PM, Front-end, UI/UX 디자이너와 협업하여 프로젝트의 기획부터 배포까지 경험</p>
-
-<ul>
-  <li><strong>현업 야놀자 개발자 평가 후 12팀 중 1위로 최우수 프로젝트 선정</strong></li>
-</ul>
-
-<p>여행/숙박/예약 도메인의 비즈니스적 관점에서의 문제점을 겪고 해결</p>
-
-<p>Spring Boot, MyBatis, JPA, Git, AWS, CI/CD 외 다수</p>
-
-    </div>
-  </div>
-
   <div class="row clearfix layout layout-top-left border-no">
     <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
       <h4 id="대구대학교">대구대학교</h4><p><b>AI 소프트웨어 전공</b></p><p>2018.03 ~ 2024.02</p><p class="no-print aditional-links">
         
       </p>
     </div>
-    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content"><p>학점 : 3.87 / 4.5 <br />
-성적장학금 3회 및 교수님 추천 장학금 수혜 <br />
-자료구조 : A+ |
-운영체제 : A+ |
-컴퓨터네트워크 : A |
-자바 프로그래밍 : A+</p>
+    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content"><p>GPA : 3.87 / 4.5 <br /></p>
+
+    </div>
+  </div>
+
+  <div class="row clearfix layout layout-top-left border-no">
+    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
+      <h4 id="육군-제-22사단">육군 제 22사단</h4><p><b>정보통신대대 교환병 만기전역</b></p><p>2019.02 ~ 2020.09</p><p class="no-print aditional-links">
+        
+      </p>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content"><p>육군훈련소 수료 후 ‘훈련병 간 상호평가 최우수자’로 선정되어 연대장(대령) 표창 수상 &amp; 포상휴가 수여</p>
 
     </div>
   </div>
